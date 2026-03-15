@@ -1424,6 +1424,8 @@ button:disabled{opacity:0.5;cursor:not-allowed;transform:none!important;}
     #tcc-confirm-ok{background:linear-gradient(135deg,rgba(239,68,68,.2),rgba(239,68,68,.1));border-color:rgba(239,68,68,.45);color:#f87171;}
     #tcc-confirm-ok.ok-gold{background:linear-gradient(135deg,rgba(240,185,11,.2),rgba(240,185,11,.08));border-color:rgba(240,185,11,.45);color:var(--gold,#f0b90b);}
     #tcc-confirm-ok:hover{filter:brightness(1.15);}
+    #comm-month-dropdown option{background:#1a1f26;color:#e8e8e8;}
+    #comm-month-dropdown option:checked{background:#f0b90b;color:#000;}
   </style>
 </head>
 <body>
@@ -3115,7 +3117,7 @@ function buildYourTeamCommission(){
         <!-- Dropdown month selector -->
         <div style="position:relative;display:inline-block;">
           <select id="comm-month-dropdown" onchange="onCommMonthDropdownChange(this.value)"
-            style="padding:7px 34px 7px 13px;background:rgba(240,185,11,0.1);border:1px solid rgba(240,185,11,0.38);
+            style="padding:7px 34px 7px 13px;background:#1a1f26;border:1px solid rgba(240,185,11,0.38);
               border-radius:8px;color:var(--gold);font-size:0.85rem;font-family:'Prompt',sans-serif;
               appearance:none;-webkit-appearance:none;cursor:pointer;outline:none;
               transition:border-color 0.2s;min-width:200px;">
