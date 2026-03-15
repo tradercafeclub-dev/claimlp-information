@@ -525,7 +525,7 @@ function renderPayment(p) {
         const amt  = (pts[1]||'').trim();
         return `<div class="trade-card">
           <div class="trade-no">ครั้งที่ ${idx+1}</div>
-          <div class="trade-coin">${coin||'—'}/USDT</div>
+          <div class="trade-coin">${coin||'—'}</div>
           <div class="trade-amt">${amt}</div>
         </div>`;
       }).join('')}
@@ -565,11 +565,11 @@ function renderPayment(p) {
     <div class="card-body">
       <!-- Member -->
       <div class="member-block">
-        <div class="member-avatar">👤</div>
+        <div class="member-avatar">🎯</div>
         <div style="flex:1;">
           <div class="member-name">${name}</div>
           <div class="member-meta">
-            <span>🪙🪙 UID: <b>${bnbId}</b></span>
+            <span>🪙 UID: <b>${bnbId}</b></span>
             <span>🏆 ${team}</span>
           </div>
           <div class="member-comm">📈 TEAM COMMISSION: <b>${fmtUSD(comm)}</b></div>
@@ -582,12 +582,12 @@ function renderPayment(p) {
       <!-- Level Commission -->
       <div class="level-grid">
         <div class="level-box lva">
-          <div class="level-lbl">LEVEL A — ${lva||'—'}</div>
+          <div class="level-lbl">LEVEL 🅰️: ${lva||'—'}</div>
           <div class="level-val">${fmtUSD(lvaComm)}</div>
           <div class="level-sub">(15% ของค่าคอม)</div>
         </div>
         <div class="level-box lvb">
-          <div class="level-lbl">LEVEL B — ${lvb||'—'}</div>
+          <div class="level-lbl">LEVEL 🅱️: ${lvb||'—'}</div>
           <div class="level-val">${fmtUSD(lvbComm)}</div>
           <div class="level-sub">(10% ของค่าคอม)</div>
         </div>
@@ -600,11 +600,11 @@ function renderPayment(p) {
           <div class="summary-val col-green">${fmtUSD(mem)}</div>
         </div>
         <div class="summary-box">
-          <div class="summary-lbl">ประกันกำไร (10%)</div>
+          <div class="summary-lbl">ส่วนประกันกำไร (10%)</div>
           <div class="summary-val col-gold">${fmtUSD(guar)}</div>
         </div>
         <div class="summary-box highlight">
-          <div class="summary-lbl">⭐ รายได้รวม</div>
+          <div class="summary-lbl">⭐ ส่วนรายได้รวม</div>
           <div class="summary-val col-gold">${fmtUSD(mem + guar)}</div>
         </div>
       </div>
@@ -645,7 +645,7 @@ function renderPayment(p) {
             </div>
           </div>
           <div class="amount-box">
-            <div class="amount-lbl">TOTAL PAYMENT AMOUNT</div>
+            <div class="amount-lbl">TOTAL TRANSFER AMOUNT</div>
             <div class="amount-val">${fmtUSD(trans)}</div>
           </div>
         </div>
