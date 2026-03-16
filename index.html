@@ -1806,7 +1806,7 @@ async function testConn(){
     // ── ตรวจผ่าน Worker /health แทน NocoDB โดยตรง ──
     const r=await fetch(`${WORKER_URL}/health`);
     if(r.ok){
-      el.className='hconn ok';el.textContent='✅ NocoDB';
+      el.className='hconn ok';el.textContent='✅ Binance Data Connected';
       setTimeout(()=>{el.style.display='none';},3000);
     } else if(r.status===429){
       el.className='hconn err';el.textContent='⚠️ 429';
