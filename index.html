@@ -2037,13 +2037,13 @@ a{color:var(--gold);text-decoration:none}
       <div id="sub-form">
         <!-- ข้อมูลส่วนตัว -->
         <div class="form-section">
-          <div class="form-section-title">👤 ข้อมูลส่วนตัว</div>
+          <div class="form-section-title">👤 ข้อมูลระบบ</div>
           <div class="form-group">
             <label class="form-label">ชื่อ-นามสกุล <span style="color:var(--error)">*</span></label>
             <input type="text" id="sf-name" class="form-input" placeholder="กรอกชื่อ-นามสกุลจริง">
           </div>
           <div class="form-group">
-            <label class="form-label">🆔 Binance ID / เลขสมาชิก <span style="color:var(--error)">*</span></label>
+            <label class="form-label">Binance ID / เลขสมาชิก <span style="color:var(--error)">*</span></label>
             <input type="text" id="sf-binance-id" class="form-input" placeholder="กรอก Binance ID หรือเลขสมาชิก" autocomplete="off">
           </div>
           <div class="form-group">
@@ -2054,11 +2054,11 @@ a{color:var(--gold);text-decoration:none}
 
         <!-- ข้อมูล LP Claim -->
         <div class="form-section">
-          <div class="form-section-title">🛡️ ข้อมูล Claim LP</div>
+          <div class="form-section-title">🛡️ ข้อมูลการ Claim LP</div>
 
           <!-- ทุน -->
           <div class="form-group">
-            <label class="form-label">🪙 ทุน (Capital) <span style="color:var(--error)">*</span></label>
+            <label class="form-label">ทุนรวม (Capital) <span style="color:var(--error)">*</span></label>
             <input type="text" inputmode="decimal" id="sf-capital" class="form-input coin-input" placeholder="0.00" oninput="fmtCoinInput(this,true);calcLP()" autocomplete="off">
             <div class="coin-preview" id="prev-capital"></div>
           </div>
@@ -2066,11 +2066,11 @@ a{color:var(--gold);text-decoration:none}
           <!-- วันที่ -->
           <div class="input-row-2">
             <div class="form-group">
-              <label class="form-label">📅 วันที่เพิ่มทุนครั้งล่าสุด <span style="color:var(--error)">*</span></label>
+              <label class="form-label">วันที่เพิ่มทุนครั้งล่าสุด <span style="color:var(--error)">*</span></label>
               <input type="date" id="sf-start-date" class="form-input" onchange="calcLP()">
             </div>
             <div class="form-group">
-              <label class="form-label">⚠️ วันที่พอร์ตเสียหาย <span style="color:var(--error)">*</span></label>
+              <label class="form-label">วันที่พอร์ตเสียหาย <span style="color:var(--error)">*</span></label>
               <input type="date" id="sf-end-date" class="form-input" onchange="calcLP()">
             </div>
           </div>
@@ -2080,19 +2080,19 @@ a{color:var(--gold);text-decoration:none}
             <div style="font-size:11px;font-weight:700;color:var(--blue-l);letter-spacing:.5px;margin-bottom:10px">⚙️ ผลคำนวณอัตโนมัติ</div>
             <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
               <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:10px;padding:10px 12px">
-                <div style="font-size:10px;color:var(--text-s);margin-bottom:3px">📆 Working Days</div>
+                <div style="font-size:10px;color:var(--text-s);margin-bottom:3px">Working Days</div>
                 <div style="font-size:16px;font-weight:700;color:var(--text)" id="calc-working-days">—</div>
               </div>
               <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:10px;padding:10px 12px">
-                <div style="font-size:10px;color:var(--text-s);margin-bottom:3px">🛡️ ประกัน (10%)</div>
+                <div style="font-size:10px;color:var(--text-s);margin-bottom:3px">ประกันกำไรขั้นต่ำ</div>
                 <div style="font-size:16px;font-weight:700;color:var(--text)" id="calc-guarantee">—</div>
               </div>
               <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:10px;padding:10px 12px">
-                <div style="font-size:10px;color:var(--text-s);margin-bottom:3px">📈 กำไรประกัน</div>
+                <div style="font-size:10px;color:var(--text-s);margin-bottom:3px">ประกันกำไรรวม</div>
                 <div style="font-size:16px;font-weight:700;color:var(--green)" id="calc-profit-guarantee">—</div>
               </div>
               <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:10px;padding:10px 12px">
-                <div style="font-size:10px;color:var(--text-s);margin-bottom:3px">💰 Net Total</div>
+                <div style="font-size:10px;color:var(--text-s);margin-bottom:3px">Net Total</div>
                 <div style="font-size:16px;font-weight:700;color:var(--cyan)" id="calc-net-total">—</div>
               </div>
             </div>
@@ -2100,21 +2100,21 @@ a{color:var(--gold);text-decoration:none}
 
           <!-- รับจริง -->
           <div class="form-group">
-            <label class="form-label">✅ รับจริง (Profit Received) <span style="color:var(--error)">*</span></label>
+            <label class="form-label">ยอดรับไปแล้วรวม (Profit Received) <span style="color:var(--error)">*</span></label>
             <input type="text" inputmode="decimal" id="sf-profit-received" class="form-input coin-input" placeholder="0.00" oninput="fmtCoinInput(this,true);calcLP()" autocomplete="off">
             <div class="coin-preview" id="prev-profit-received"></div>
           </div>
 
           <!-- ยอดเครม (auto) -->
           <div class="form-group">
-            <label class="form-label">💸 ยอดเครม (Claim Amount)</label>
+            <label class="form-label">ยอดเครมรวม (Claim Amount)</label>
             <input type="text" id="sf-debt" class="form-input coin-input" placeholder="คำนวณอัตโนมัติ" readonly style="background:rgba(245,158,11,.06);border-color:rgba(245,158,11,.3);color:var(--gold);font-weight:700;cursor:not-allowed">
-            <div style="font-size:11px;color:var(--text-s);margin-top:4px">⚙️ คำนวณอัตโนมัติ: Net Total − รับจริง</div>
+            <div style="font-size:11px;color:var(--text-s);margin-top:4px">⚙️ คำนวณอัตโนมัติ: Net Total หักยอดที่รับไปแล้ว</div>
           </div>
 
           <!-- ค่าคอมมิชชั่น -->
           <div class="form-group">
-            <label class="form-label">🛒 ยอดค่าคอมมิชชั่นคงค้าง (USDT)</label>
+            <label class="form-label">ยอดค่าคอมมิชชั่นคงค้าง (USDT)</label>
             <input type="text" inputmode="decimal" id="sf-goods" class="form-input coin-input" placeholder="0.00" oninput="fmtCoinInput(this,true)" autocomplete="off">
             <div class="coin-preview" id="prev-goods"></div>
           </div>
@@ -2710,16 +2710,16 @@ function buildDebtSchedule(sub){
 
     <!-- header -->
     <div class="debt-sched-hdr">
-      <span class="debt-sched-hdr-title">📊 สรุปรายการหนี้สินคงค้าง</span>
+      <span class="debt-sched-hdr-title">📊 สรุปรายการยอดคงค้าง</span>
       ${statusChip}
     </div>
 
     <!-- summary cards -->
     <div class="debt-total-grid" style="padding-top:14px">
       <div class="debt-total-item">
-        <div class="debt-total-label">ยอดเงินคงค้างโดยประมาณ</div>
+        <div class="debt-total-label">ยอดคงค้างโดยประมาณ</div>
         <div class="debt-total-val">${fmtBaht(estimated)}</div>
-        <div class="debt-total-sub">ประนอมหนี้ ${fmtBaht(debt)}<br>+ สินค้าคงค้าง ${fmtBaht(goods)}</div>
+        <div class="debt-total-sub">Claim LP ${fmtBaht(debt)}<br>+ Commission ${fmtBaht(goods)}</div>
       </div>
       <div class="debt-total-item">
         <div class="debt-total-label">ยอดสรุปวงเงินคงค้างรวม</div>
@@ -6578,7 +6578,7 @@ function fmtCoinInput(el, isDecimal=false){
   const display = isDecimal
     ? num.toLocaleString('th-TH',{minimumFractionDigits:2,maximumFractionDigits:2})
     : num.toLocaleString('th-TH',{minimumFractionDigits:2,maximumFractionDigits:2});
-  prev.textContent = display + (isDecimal?' บาท':' เหรียญ');
+  prev.textContent = display + (isDecimal?' USDT':' เหรียญ');
   prev.className = 'coin-preview has-value';
 }
 function fmtTime(s){ try{ return new Date(s).toLocaleTimeString('th-TH',{hour:'2-digit',minute:'2-digit'}); }catch{ return ''; } }
